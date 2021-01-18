@@ -26,13 +26,13 @@ func (p *GCSProvider) DownloadModel(modelDir string, modelName string, storageUr
 		prefix = tokens[1]
 	}
 	ctx := context.Background()
-	gcsObjectDownloader := &GCSObjectDownloader {
-		Context: ctx,
+	gcsObjectDownloader := &GCSObjectDownloader{
+		Context:    ctx,
 		StorageUri: storageUri,
-		ModelDir: modelDir,
-		ModelName: modelName,
-		Bucket: tokens[0],
-		Item: prefix,
+		ModelDir:   modelDir,
+		ModelName:  modelName,
+		Bucket:     tokens[0],
+		Item:       prefix,
 	}
 	it, err := gcsObjectDownloader.GetObjectIterator(p.Client)
 	if err != nil {

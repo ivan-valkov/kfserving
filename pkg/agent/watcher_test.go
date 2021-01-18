@@ -321,7 +321,7 @@ var _ = Describe("Watcher", func() {
 				logger.Printf("Creating mock GCS Client")
 				ctx := context.Background()
 				client := mocks.NewMockClient()
-				cl := storage.GCSProvider {
+				cl := storage.GCSProvider{
 					Client: client,
 				}
 
@@ -354,7 +354,7 @@ var _ = Describe("Watcher", func() {
 				logger.Printf("Creating mock GCS Client")
 				ctx := context.Background()
 				client := mocks.NewMockClient()
-				cl := storage.GCSProvider {
+				cl := storage.GCSProvider{
 					Client: client,
 				}
 
@@ -381,7 +381,7 @@ var _ = Describe("Watcher", func() {
 				logger.Printf("Creating mock GCS Client")
 				ctx := context.Background()
 				client := mocks.NewMockClient()
-				cl := storage.GCSProvider {
+				cl := storage.GCSProvider{
 					Client: client,
 				}
 
@@ -432,7 +432,7 @@ var _ = Describe("Watcher", func() {
 				// Creating GCS mock client and populating buckets
 				ctx := context.Background()
 				client := mocks.NewMockClient()
-				cl := storage.GCSProvider {
+				cl := storage.GCSProvider{
 					Client: client,
 				}
 				bkt := client.Bucket("testBucket")
